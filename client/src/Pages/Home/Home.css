@@ -1,0 +1,122 @@
+.home {
+    background-color: var(--background-color);
+    height: 100vh;
+    max-height: 65rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.name-animation {
+    font-size: 4rem;
+    font-weight: 700;
+    white-space: nowrap;
+    overflow: hidden;
+    color: var(--green);
+}
+
+.home-hero__content {
+    position: absolute;
+    top: 16%;
+    max-width: 90rem;
+    width: 92%;
+}
+
+.heading-primary {
+    font-size: 3.4rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-align: center;
+    font-weight: 800;
+}
+
+.heading-primary span {
+    color: var(--lightest-slate);
+    font-size: 8rem;
+}
+
+.home-hero__info {
+    margin: 2rem auto 0 auto;
+    max-width: 80rem;
+}
+
+.text-primary {
+    color: var(--slate);
+    font-size: 2.2rem;
+    text-align: center;
+    width: 100%;
+    line-height: 1.6;
+}
+
+.home__border {
+    position: absolute;
+    bottom: 17%;
+    width: 70%;
+    height: .7px;
+
+
+}
+
+.mouse__scroll {
+    position: absolute;
+    bottom: 4%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.mouse {
+    width: 25px;
+    height: 40px;
+    border: 2px solid var(--green);
+    border-radius: 60px;
+    position: relative;
+    overflow: hidden;
+}
+
+.mouse::before {
+    content: '';
+    width: 5px;
+    height: 5px;
+    position: absolute;
+    top: 7px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--lightest-slate);
+    border-radius: 50%;
+    opacity: 1;
+    animation: wheel 1.3s infinite;
+    -webkit-animation: wheel 1.3s infinite;
+}
+
+@keyframes wheel {
+    0% {
+        transform: translate(-50%, 0) rotate(0);
+    }
+
+    100% {
+        transform: translate(-50%, 400%) rotate(0);
+    }
+}
+
+@media only screen and (max-width:800px) {
+    .home {
+        height: 85vh;
+    }
+
+    .home-hero__content {
+        top: 10%;
+    }
+
+
+
+    .text-primary {
+        font-size: 2rem;
+        line-height: 1.3;
+    }
+
+    .heading-primary span {
+        font-size: 7rem;
+    }
+}

@@ -1,0 +1,65 @@
+time {
+    line-height: 1.6;
+    color: var(--slate);
+}
+
+p {
+    line-height: 1.8;
+}
+
+main {
+
+    display: grid;
+    place-content: center;
+    padding: 1rem;
+}
+
+.timeline {
+    padding: 3rem 2rem;
+    max-width: 900px;
+}
+
+.tl-content .tl-header,
+.tl-content .tl-body {
+    padding-left: 30.6px;
+    border-left: 3px solid var(--slate);
+}
+
+.tl-body {
+    padding-bottom: 5rem;
+    font-size: 1.2em;
+    color: var(--lightest-slate);
+}
+
+.tl-header {
+    position: relative;
+    display: grid;
+    padding-top: 1rem;
+}
+
+.tl-title {
+    font-weight: 600;
+    font-size: 2.4em;
+    color: var(--green);
+}
+
+.t1-subtitle {
+    font-size: 2.4em;
+    color: var(--slate);
+}
+
+.tl-time {
+    font-size: 1.4em;
+}
+
+.tl-marker {
+    display: block;
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50% / 50%;
+    background: var(--slate);
+    left: -1.6rem;
+    top: 50%;
+    transform: translate(50%, -50%);
+}

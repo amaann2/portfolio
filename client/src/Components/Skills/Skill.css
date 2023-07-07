@@ -1,0 +1,22 @@
+.skill {
+    margin: 4rem 0;
+}
+
+.skills_skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem 4rem;
+}
+
+.skill .skill-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: .5rem;
+}
+
+.skills_skill h5 {
+    color: var(--slate);
+    font-size: 2.2rem;
+}
