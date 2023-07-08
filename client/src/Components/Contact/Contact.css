@@ -1,0 +1,69 @@
+label,
+input,
+textarea {
+    display: block;
+    width: 100%;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    padding: 0.3em;
+}
+
+.label {
+    font-weight: 700;
+    color: var(--lightest-slate);
+    line-height: 2.5rem;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+input[type="submit"] {
+    background: var(--navy);
+    color: var(--green);
+    border: 2px solid var(--green);
+    font-weight: 700;
+    font-size: 1.4rem;
+    border-radius: 5px;
+    margin-top: 1.3em;
+
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background: var(--light-navy);
+
+}
+
+
+
+form {
+    padding-top: 40px;
+    padding-right: 40px;
+    padding-bottom: 40px;
+    padding-left: 40px;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.required-star {
+    color: var(--slate);
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 9px 20px;
+    border: none;
+    background-color: var(--green-tint);
+    color: var(--white);
+    box-sizing: border-box;
+    font-size: 1.5rem;
+    border-radius: 3px;
+    line-height: 2rem;
+}

@@ -8,6 +8,7 @@ const projectRoute = require("./Routes/projectRoute");
 const educationRoute = require("./Routes/educationRoute");
 const skillRoute = require("./Routes/skillRoute");
 const userRoute = require("./Routes/userRoute");
+const { sendMail } = require("./Controller/emailController");
 
 app.use("*", cors());
 app.use(express.json());
@@ -22,6 +23,7 @@ app.use("/api/v1/project", projectRoute);
 app.use("/api/v1/skill", skillRoute);
 app.use("/api/v1/blogs", blogsRoute);
 app.use("/api/v1/users", userRoute);
+app.post("/contact", sendMail);
 
 app.use(globalErrorController);
 

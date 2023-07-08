@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { RxCross1 } from "react-icons/rx";
 import logo from "../../assets/logo.png";
-const Navbar = ({ about, project }) => {
+const Navbar = ({ about, project, contact }) => {
   const [navIsOpen, setNavIsOpen] = useState(false);
   const toggleNav = () => {
     setNavIsOpen(!navIsOpen);
@@ -40,7 +40,7 @@ const Navbar = ({ about, project }) => {
         <li className="nav-link">
           <Link to="/blog">Blog</Link>
         </li>
-        <li className="nav-link">
+        <li className="nav-link" onClick={() => scrollToSection(contact)}>
           <Link to="#contact">Contact</Link>
         </li>
       </ul>
