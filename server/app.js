@@ -11,6 +11,7 @@ const userRoute = require("./Routes/userRoute");
 const aboutRoute = require("./Routes/aboutRoute");
 const { sendMail } = require("./Controller/emailController");
 const AppError = require("./Utils/appError");
+const path = require("path");
 
 app.use("*", cors());
 app.use(express.json());
@@ -30,9 +31,9 @@ app.use("/api/v1/users", userRoute);
 app.use("/api/v1/about", aboutRoute);
 app.post("/contact", sendMail);
 
-// app.all("*", (req, res, next) => {
-//   next(new AppError(`can't find ${req.originalUrl} on this server`, 404));
-// });
+app.all("*", (req, res, next) => {
+  next(new AppError(`can't find ${req.originalUrl} on this server`, 404));
+});
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "build", "index.html"));
 });
