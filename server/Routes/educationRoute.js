@@ -6,14 +6,15 @@ const {
   updateEducation,
   deleteEducation,
 } = require("../Controller/educationController");
+const { protect } = require("../Controller/authController");
 
 const router = express.Router();
 
-router.route("/").get(getAllEducation).post(createEducation);
+router.route("/").get(getAllEducation).post(protect, createEducation);
 router
   .route("/:id")
   .get(getEducation)
-  .patch(updateEducation)
-  .delete(deleteEducation);
-  
+  .patch(protect, updateEducation)
+  .delete(protect, deleteEducation);
+
 module.exports = router;

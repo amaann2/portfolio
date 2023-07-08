@@ -9,11 +9,14 @@ import { composeWithDevTools } from "redux-devtools-extension";
 import { educationReducer } from "./Education/educationReducer";
 import { blogReducer } from "./Blog/blogReducer";
 import { projectReducer } from "./Project/projectReducer";
-
+import { aboutReducer } from "./About/aboutReducer";
+import { userReducer } from "./User/userReducer";
 const reducer = combineReducers({
   education: educationReducer,
   blogs: blogReducer,
   projects: projectReducer,
+  about: aboutReducer,
+  user: userReducer,
 });
 const initialState = {};
 const middleware = [thunk, logger];

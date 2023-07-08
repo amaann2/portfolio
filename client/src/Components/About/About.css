@@ -2,7 +2,7 @@
 .col-2 p {
     color: var(--slate);
     font-size: 1.6rem;
-    padding: 10rem ;
+    padding: 2rem  7rem;
     /* letter-spacing: 2; */
     line-height: 24px;
 }
@@ -11,7 +11,7 @@
     min-width: 200px;
     width: 50%;
     position: relative;
-    bottom: 5rem;
+    bottom: 3rem;
     /* left: 9rem; */
 }
 

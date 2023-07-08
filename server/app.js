@@ -8,6 +8,7 @@ const projectRoute = require("./Routes/projectRoute");
 const educationRoute = require("./Routes/educationRoute");
 const skillRoute = require("./Routes/skillRoute");
 const userRoute = require("./Routes/userRoute");
+const aboutRoute = require("./Routes/aboutRoute");
 const { sendMail } = require("./Controller/emailController");
 
 app.use("*", cors());
@@ -16,6 +17,7 @@ app.use(express.json());
 if (process.env.NODE_ENV === "development") {
   app.use(morgan("dev"));
 }
+
 app.use(express.static(`${__dirname}/public/img`));
 
 app.use("/api/v1/education", educationRoute);
@@ -23,8 +25,12 @@ app.use("/api/v1/project", projectRoute);
 app.use("/api/v1/skill", skillRoute);
 app.use("/api/v1/blogs", blogsRoute);
 app.use("/api/v1/users", userRoute);
+app.use("/api/v1/about", aboutRoute);
 app.post("/contact", sendMail);
 
+app.all("*", (req, res, next) => {
+  next(new appError(`can't find ${req.originalUrl} on this server`, 404));
+});
 app.use(globalErrorController);
 
 module.exports = app;

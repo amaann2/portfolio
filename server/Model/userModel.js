@@ -28,19 +28,20 @@ const userSchema = mongoose.Schema({
       message: "passwords are not the same !",
     },
   },
-  photo: {
-    type: String,
-  },
-  aboutMe: {
-    type: String,
-  },
-  linkedin: String,
-  github: String,
-  instagram: String,
-  phone: Number,
-  twitter: String,
 });
 
+userSchema.pre("save", async function (next) {
+  if (!this.isModified("password")) return next();
+  this.password = await bcrypt.hash(this.password, 12);
+  this.confirmPassword = undefined;
+  next();
+});
+userSchema.methods.correctPassword = async function (
+  candidatePassword,
+  userPassword
+) {
+  return await bcrypt.compare(candidatePassword, userPassword);
+};
 const User = mongoose.model("User", userSchema);
 
 module.exports = User;

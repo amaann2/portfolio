@@ -1,7 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Typed from "react-typed";
 import "./HomeHero.css";
+import { useDispatch, useSelector } from "react-redux";
+import { getAllAbout } from "../../Redux/About/aboutAction";
+
 const HomeHero = () => {
+  const dispatch = useDispatch();
+  const { about } = useSelector((state) => state.about);
+  useEffect(() => {
+    dispatch(getAllAbout());
+  }, [dispatch]);
+  console.log(about);
   return (
     <div className="home">
       <div className="home-hero__content">
@@ -17,11 +26,11 @@ const HomeHero = () => {
           </span>
         </h2>
         <div className="home-hero__info">
-          <p className="text-primary" data-aos="fade-up">
-            A Focused Full Stack Web Developer building the Frontend and Backend
-            of Websites and Web Applications that leads to the success of the
-            overall product
-          </p>
+          {about && about[0] && (
+            <p className="text-primary" data-aos="fade-up">
+              {about[0].summary}
+            </p>
+          )}
         </div>
       </div>
       <div className="home__border">

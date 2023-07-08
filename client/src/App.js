@@ -11,6 +11,7 @@ import SplashScreen from "./Components/splash-screen/SplashScreen";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import Footer from "./Components/Footer/Footer";
+import Login from "./Pages/Login/Login";
 function App() {
   const [showSplash, setShowSplash] = useState(true);
   const about = useRef(null);
@@ -47,6 +48,9 @@ function App() {
           </Routes>
           <Routes>
             <Route path="/blog" element={<Blog />} />
+          </Routes>
+          <Routes>
+            <Route path="/login" element={<Login />} />
           </Routes>
           <Footer />
           <ToastContainer />
