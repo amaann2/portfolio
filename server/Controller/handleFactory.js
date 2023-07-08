@@ -36,7 +36,7 @@ exports.getOne = (Model) =>
   });
 
 exports.updateOne = (Model) =>
-  catchAsyncError(async (req, res) => {
+  catchAsyncError(async (req, res, next) => {
     const { id } = req.params;
     const doc = await Model.findByIdAndUpdate(id, req.body, {
       new: true,
@@ -52,7 +52,7 @@ exports.updateOne = (Model) =>
   });
 
 exports.deleteOne = (Model) =>
-  catchAsyncError(async (req, res) => {
+  catchAsyncError(async (req, res, next) => {
     const { id } = req.params;
     const doc = await Model.findByIdAndDelete(id);
 
