@@ -10,6 +10,7 @@ const skillRoute = require("./Routes/skillRoute");
 const userRoute = require("./Routes/userRoute");
 const aboutRoute = require("./Routes/aboutRoute");
 const { sendMail } = require("./Controller/emailController");
+const AppError = require("./Utils/appError");
 
 app.use("*", cors());
 app.use(express.json());
@@ -29,7 +30,7 @@ app.use("/api/v1/about", aboutRoute);
 app.post("/contact", sendMail);
 
 app.all("*", (req, res, next) => {
-  next(new appError(`can't find ${req.originalUrl} on this server`, 404));
+  next(new AppError(`can't find ${req.originalUrl} on this server`, 404));
 });
 app.use(globalErrorController);
 
