@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import Typed from "react-typed";
+// import Typed from "react-typed";
 import "./HomeHero.css";
 import { useDispatch, useSelector } from "react-redux";
 import { getAllAbout } from "../../Redux/About/aboutAction";
@@ -16,12 +16,12 @@ const HomeHero = () => {
         <h2 className="heading-primary" data-aos="fade-up">
           hey, I'm <br />
           <span>
-            <Typed
+            {/* <Typed
               strings={["Amaan", "अमान", "أمان"]}
               typeSpeed={150}
               backSpeed={100}
               loop
-            />
+            /> */}
           </span>
         </h2>
         <div className="home-hero__info">
