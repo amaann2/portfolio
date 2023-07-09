@@ -22,7 +22,11 @@ const Skill = () => {
         {data &&
           data.map((skill) => (
             <div className="skills_skill" data-aos="fade-up" key={skill._id}>
-              <img src={skill.image} alt="skill" className="skill-icon" />
+              <img
+                src={`/img/${skill.image}`}
+                alt="skill"
+                className="skill-icon"
+              />
               <h5>{skill.name}</h5>
             </div>
           ))}

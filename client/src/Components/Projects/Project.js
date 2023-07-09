@@ -18,7 +18,7 @@ const Project = () => {
             <div className="courses-container" key={project._id}>
               <div className="course" data-aos="fade-up">
                 <div className="course-preview">
-                  <img src={project.imageCover} alt="" />
+                  <img src={`/img/${project.imageCover}`} alt="" />
                 </div>
                 <div className="course-info">
                   <h6>{project.title}</h6>

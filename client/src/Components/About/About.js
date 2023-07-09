@@ -20,7 +20,7 @@ const About = () => {
         </div>
         <div className="col-2">
           <div className="profile-img">
-            {about && about[0] && <img src={about[0].photo} alt="" />}
+            {about && about[0] && <img src={`/img/${about[0].photo}`} alt="" />}
           </div>
         </div>
       </div>
