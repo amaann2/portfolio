@@ -12,7 +12,15 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import Footer from "./Components/Footer/Footer";
 import Login from "./Pages/Login/Login";
+import Dashboard from "./Admin/Pages/Dashboard/Dashboard";
+import store from "./Redux/store";
+import { loadUser } from "./Redux/User/userAction";
+import { useSelector } from "react-redux";
 function App() {
+  useEffect(() => {
+    store.dispatch(loadUser());
+  }, []);
+  const { isAuthentication } = useSelector((state) => state.user);
   const [showSplash, setShowSplash] = useState(true);
   const about = useRef(null);
   const project = useRef(null);
@@ -26,7 +34,6 @@ function App() {
   useEffect(() => {
     Aos.init({ duration: 2000 });
   }, []);
-
   return (
     <>
       {showSplash ? (
@@ -39,7 +46,6 @@ function App() {
           <SocialIcons />
           <Routes>
             <Route
-              exact
               path="/"
               element={
                 <Home about={about} project={project} contact={contact} />
@@ -51,6 +57,12 @@ function App() {
           </Routes>
           <Routes>
             <Route path="/login" element={<Login />} />
+          </Routes>
+          <Routes>
+            <Route
+              path="/admin/dashboard"
+              element={isAuthentication ? <Dashboard /> : <Login />}
+            />
           </Routes>
           <Footer />
           <ToastContainer />

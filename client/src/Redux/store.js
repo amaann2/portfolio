@@ -3,7 +3,7 @@ import {
   applyMiddleware,
   legacy_createStore as createStore,
 } from "redux";
-import logger from "redux-logger";
+// import logger from "redux-logger";
 import thunk from "redux-thunk";
 import { composeWithDevTools } from "redux-devtools-extension";
 import { educationReducer } from "./Education/educationReducer";
@@ -19,7 +19,7 @@ const reducer = combineReducers({
   user: userReducer,
 });
 const initialState = {};
-const middleware = [thunk, logger];
+const middleware = [thunk];
 
 export const store = createStore(
   reducer,

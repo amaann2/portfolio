@@ -15,7 +15,7 @@ const Education = () => {
       <div className="timeline">
         {educations &&
           educations.map((education) => (
-            <div className="tl-content " data-aos="fade-up">
+            <div className="tl-content " data-aos="fade-up" key={education._id}>
               <div className="tl-header">
                 <span className="tl-marker" />
                 <p className="tl-title">{education.degree}</p>

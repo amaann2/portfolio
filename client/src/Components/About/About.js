@@ -14,18 +14,13 @@ const About = () => {
 
       <div className="row">
         <div className="col-2">
-          {
-            about && about[0] && about[0]?.aboutMe?.map((para) => (
-              <p>{para}</p>
-            ))
-          }
+          {about &&
+            about[0] &&
+            about[0]?.aboutMe?.map((para, i) => <p key={i}>{para}</p>)}
         </div>
         <div className="col-2">
           <div className="profile-img">
-            {
-              about && about[0] && <img src={about[0].photo} alt="" />
-            }
-
+            {about && about[0] && <img src={about[0].photo} alt="" />}
           </div>
         </div>
       </div>

@@ -6,7 +6,7 @@ export const getAllAbout = () => async (dispatch) => {
       type: aboutActionType.ALL_ABOUT_REQUEST,
     });
     const res = await axios.get(`/api/v1/about`);
-    console.log(res);
+    
     dispatch({
       type: aboutActionType.ALL_ABOUT_SUCCESS,
       payload: res.data.data,

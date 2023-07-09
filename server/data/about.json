@@ -1,0 +1,18 @@
+[
+    {
+        "_id": "64a9715f5fa0bc17c4d82b3d",
+        "name": "Amaan Ansari",
+        "email": "ansari028amaan@gmail.com",
+        "summary": "A Focused Full Stack Web Developer building the Frontend and Backend of Websites and Web Applications that leads to the success of the overall product",
+        "aboutMe": [
+            "My education background includes a Bachelor of Computer Applications in Computer Science, currently underway at Somaiya Vidyavihar University. Prior to this, I completed my high school education in Science at S.M. Shetty College- Degree Section, where I studied physics, chemistry, mathematics, biology, and IT. I also completed my SSC from Eden High School, where I achieved a grade of 82.00%.",
+            "As a passionate and driven Computer Science student, I have developed a strong foundation in frontend development and proficiency in programming languages such as HTML, CSS, JavaScript, and React. In addition to these, I also have knowledge in other programming languages such as Java, C++, Python, and Node.js.",
+            "As a quick learner, I'm open to internship opportunities where I can contribute, learn and grow. If you have a good opportunity that matches my skills and experience then don't hesitate to contact me where I can leverage my existing skill set and expand it further through ongoing studies and future projects"
+        ],
+        "linkedin": "https://www.linkedin.com/in/amaan-ansarii/",
+        "github": "https://www.github.com/amaann2",
+        "instagram": "https://www.instagram.com/amaann2",
+        "__v": 0,
+        "photo": "amaan.jpg"
+    }
+]

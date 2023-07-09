@@ -3,6 +3,7 @@ const User = require("./../Model/userModel");
 const appError = require("../Utils/appError");
 const jwt = require("jsonwebtoken");
 const { promisify } = require("util");
+const { getOne } = require("./handleFactory");
 const signInToken = (id) => {
   return jwt.sign({ id: id }, process.env.JWT_SECRET_KEY, {
     expiresIn: process.env.JWT_EXPIRES_IN,
@@ -79,3 +80,20 @@ exports.protect = catchAsyncError(async (req, res, next) => {
   req.user = freshUser;
   next();
 });
+exports.getMe = (req, res, next) => {
+  req.params.id = req.user.id;
+  next();
+};
+exports.logout = catchAsyncError(async (req, res, next) => {
+  res.cookie("jwt", null, {
+    expires: new Date(Date.now()),
+    httpOnly: true,
+  });
+
+  res.status(200).json({
+    status: "success",
+    message: "Logout Successfull",
+  });
+});
+
+exports.getUser = getOne(User);
