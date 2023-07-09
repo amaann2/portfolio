@@ -21,7 +21,7 @@ if (process.env.NODE_ENV === "development") {
 }
 
 app.use(express.static(`${__dirname}/public/img`));
-// app.use(express.static(path.join(__dirname, "build")));
+app.use(express.static(path.join(__dirname, "build")));
 
 app.use("/api/v1/education", educationRoute);
 app.use("/api/v1/project", projectRoute);
@@ -31,12 +31,12 @@ app.use("/api/v1/users", userRoute);
 app.use("/api/v1/about", aboutRoute);
 app.post("/contact", sendMail);
 
-app.all("*", (req, res, next) => {
-  next(new AppError(`can't find ${req.originalUrl} on this server`, 404));
-});
-// app.get("*", (req, res) => {
-//   res.sendFile(path.join(__dirname, "build", "index.html"));
+// app.all("*", (req, res, next) => {
+//   next(new AppError(`can't find ${req.originalUrl} on this server`, 404));
 // });
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "build", "index.html"));
+});
 app.use(globalErrorController);
 
 module.exports = app;

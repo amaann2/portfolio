@@ -42,7 +42,12 @@ function App() {
         </>
       ) : (
         <>
-          <Navbar about={about} project={project} contact={contact} />
+          {!isAuthentication ? (
+            ""
+          ) : (
+            <Navbar about={about} project={project} contact={contact} />
+          )}
+
           <SocialIcons />
           <Routes>
             <Route
