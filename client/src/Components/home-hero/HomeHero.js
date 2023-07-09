@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
-// import Typed from "react-typed";
 import "./HomeHero.css";
 import { useDispatch, useSelector } from "react-redux";
 import { getAllAbout } from "../../Redux/About/aboutAction";
-
+import { Cursor } from "react-simple-typewriter";
+import { Typewriter } from "react-simple-typewriter";
 const HomeHero = () => {
   const dispatch = useDispatch();
   const { about } = useSelector((state) => state.about);
@@ -16,12 +16,14 @@ const HomeHero = () => {
         <h2 className="heading-primary" data-aos="fade-up">
           hey, I'm <br />
           <span>
-            {/* <Typed
-              strings={["Amaan", "अमान", "أمان"]}
-              typeSpeed={150}
-              backSpeed={100}
+            <Typewriter
+              words={["Amaan", "अमान", "أمان"]}
               loop
-            /> */}
+              typeSpeed={150}
+              deleteSpeed={100}
+              cursor
+              cursorStyle="_"
+            />
           </span>
         </h2>
         <div className="home-hero__info">

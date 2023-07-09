@@ -9,7 +9,7 @@ const Contact = () => {
     email: "",
     message: "",
   });
-  const [loading, setloading] = useState(false)
+  const [loading, setloading] = useState(false);
   const handleChange = (e) => {
     const { name, value } = e.target;
     setInputData({
@@ -20,11 +20,11 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      setloading(true)
-      const res = await axios.post("/contact", inputData);
+      setloading(true);
+      const res = await axios.post("/api/v1/contact", inputData);
 
       if (res.data.message) {
-        setloading(false)
+        setloading(false);
         toast.success(res.data.message, {
           position: toast.POSITION.BOTTOM_CENTER,
         });
@@ -86,17 +86,22 @@ const Contact = () => {
             />
           </li>
           <li>
-
-            <button className="btn" style={{ marginTop: '2rem' }}>{loading ? <TailSpin
-              height="20"
-              width="20"
-              color="#4fa94d"
-              ariaLabel="tail-spin-loading"
-              radius="1"
-              wrapperStyle={{}}
-              wrapperClass=""
-              visible={true}
-            /> : 'submit'}</button>
+            <button className="btn" style={{ marginTop: "2rem" }}>
+              {loading ? (
+                <TailSpin
+                  height="20"
+                  width="20"
+                  color="#4fa94d"
+                  ariaLabel="tail-spin-loading"
+                  radius="1"
+                  wrapperStyle={{}}
+                  wrapperClass=""
+                  visible={true}
+                />
+              ) : (
+                "submit"
+              )}
+            </button>
           </li>
         </ul>
       </form>

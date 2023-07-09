@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./Skill.css";
 import axios from "axios";
+import { baseUrl } from "../../Utils/baseUrl";
 const Skill = () => {
   const [data, setData] = useState();
   useEffect(() => {
@@ -23,7 +24,7 @@ const Skill = () => {
           data.map((skill) => (
             <div className="skills_skill" data-aos="fade-up" key={skill._id}>
               <img
-                src={`/img/${skill.image}`}
+                src={`${baseUrl}/${skill.image}`}
                 alt="skill"
                 className="skill-icon"
               />

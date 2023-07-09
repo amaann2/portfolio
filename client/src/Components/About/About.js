@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import "./About.css";
 import { useDispatch, useSelector } from "react-redux";
+import { baseUrl } from "../../Utils/baseUrl";
 import { getAllAbout } from "../../Redux/About/aboutAction";
 const About = () => {
   const dispatch = useDispatch();
@@ -20,7 +21,9 @@ const About = () => {
         </div>
         <div className="col-2">
           <div className="profile-img">
-            {about && about[0] && <img src={`/img/${about[0].photo}`} alt="" />}
+            {about && about[0] && (
+              <img src={`${baseUrl}/${about[0].photo}`} alt="" />
+            )}
           </div>
         </div>
       </div>

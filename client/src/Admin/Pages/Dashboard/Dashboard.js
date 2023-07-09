@@ -1,9 +1,23 @@
-import React from 'react'
-
+import axios from "axios";
+import React from "react";
+import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 const Dashboard = () => {
-  return (
-    <div>Dashboard</div>
-  )
-}
+  const navigate = useNavigate()
+  const logout = async () => {
+    try {
+      const { data } = await axios.get('/api/v1/users/logout', { withCredentials: true })
+      toast.success(data.message)
+      navigate('/')
+      window.location.reload(true)
+    } catch (error) {
+      toast.error(error.response.data.message)
+    }
+  }
+  return <div>
 
-export default Dashboard
+    <button className="btn" onClick={logout}>logout</button>
+  </div>;
+};
+
+export default Dashboard;

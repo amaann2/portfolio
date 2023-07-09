@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Login.css";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import axios from "axios";
 import { TailSpin } from "react-loader-spinner";
@@ -25,6 +25,7 @@ const Login = ({ setCurrentUser }) => {
         email: "",
         password: "",
       });
+      navigate("/admin/dashboard");
     } catch (error) {
       setLoading(false);
       toast.error(error.response.data.message);
@@ -41,7 +42,7 @@ const Login = ({ setCurrentUser }) => {
 
   return (
     <main>
-      <h3 className="heading--primary">Login</h3>
+      <h3 className="heading--primary">Admin Login </h3>
       <form onSubmit={handleSubmit}>
         <ul>
           <li>

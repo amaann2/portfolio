@@ -42,9 +42,15 @@ function App() {
         </>
       ) : (
         <>
-          <Navbar about={about} project={project} contact={contact} />
+          {!isAuthentication ? (
+            <>
+              <Navbar about={about} project={project} contact={contact} />
+              <SocialIcons />
+            </>
+          ) : (
+            ""
+          )}
 
-          <SocialIcons />
           <Routes>
             <Route
               path="/"
@@ -60,12 +66,19 @@ function App() {
             <Route path="/login" element={<Login />} />
           </Routes>
           <Routes>
-            {/* <Route
+            <Route
               path="/admin/dashboard"
               element={isAuthentication ? <Dashboard /> : <Login />}
-            /> */}
+            />
           </Routes>
-          <Footer />
+          {!isAuthentication ? (
+            <>
+              <Footer />
+            </>
+          ) : (
+            ""
+          )}
+
           <ToastContainer />
         </>
       )}

@@ -20,7 +20,7 @@ if (process.env.NODE_ENV === "development") {
   app.use(morgan("dev"));
 }
 
-app.use(express.static(`${__dirname}/public`));
+app.use(express.static(`${__dirname}/public/img/`));
 app.use(express.static(path.join(__dirname, "build")));
 
 app.use("/api/v1/education", educationRoute);
@@ -29,7 +29,7 @@ app.use("/api/v1/skill", skillRoute);
 app.use("/api/v1/blogs", blogsRoute);
 app.use("/api/v1/users", userRoute);
 app.use("/api/v1/about", aboutRoute);
-app.post("/contact", sendMail);
+app.post("/api/v1/contact", sendMail);
 
 // app.all("*", (req, res, next) => {
 //   next(new AppError(`can't find ${req.originalUrl} on this server`, 404));

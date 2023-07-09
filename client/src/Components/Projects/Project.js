@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import "./Project.css";
 import { useDispatch, useSelector } from "react-redux";
 import { getAllProject } from "../../Redux/Project/projectAction";
+import { baseUrl } from "../../Utils/baseUrl";
 const Project = () => {
   const dispatch = useDispatch();
   const { projects } = useSelector((state) => state.projects);
@@ -18,7 +19,7 @@ const Project = () => {
             <div className="courses-container" key={project._id}>
               <div className="course" data-aos="fade-up">
                 <div className="course-preview">
-                  <img src={`/img/${project.imageCover}`} alt="" />
+                  <img src={`${baseUrl}/${project.imageCover}`} alt="" />
                 </div>
                 <div className="course-info">
                   <h6>{project.title}</h6>
