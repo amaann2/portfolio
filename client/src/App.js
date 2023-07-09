@@ -60,10 +60,10 @@ function App() {
             <Route path="/login" element={<Login />} />
           </Routes>
           <Routes>
-            <Route
+            {/* <Route
               path="/admin/dashboard"
               element={isAuthentication ? <Dashboard /> : <Login />}
-            />
+            /> */}
           </Routes>
           <Footer />
           <ToastContainer />
