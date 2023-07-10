@@ -1,0 +1,86 @@
+ {/* <table>
+          <tr>
+            <th>Name</th>
+            <th>from</th>
+            <th>to</th>
+            <th>institute</th>
+            <th>Edit</th>
+            <th>Delete</th>
+          </tr>
+          {educations &&
+            educations.map((val) => (
+              <tr key={val._id}>
+                <td>{val.degree}</td>
+                <td>{val.from}</td>
+                <td>{val.to}</td>
+                <td>{val.instituteName}</td>
+                <td style={{ cursor: "pointer" }}>
+                  <FiEdit className="table-icon edit" />
+                </td>
+                <td style={{ cursor: "pointer" }}>
+                  <AiFillDelete className="table-icon delete" />
+                </td>
+              </tr>
+            ))}
+        </table> */}
+
+
+          /* <table>
+            <tr>
+              <th>Name</th>
+              <th>Image</th>
+              <th colSpan={2}>Actions</th>
+            </tr>
+            {data &&
+              data.map((val) => (
+                <tr key={val._id}>
+                  <td>{val.name}</td>
+                  <td>
+                    <img src={val.image} alt="" className="table-image" />
+                  </td>
+                  <td
+                    style={{ cursor: "pointer" }}
+                    onClick={() => handleEdit(val)}
+                  >
+                    <FiEdit className="table-icon edit" />
+                  </td>
+                  <td
+                    style={{ cursor: "pointer" }}
+                    onClick={() => handleDelete(val._id)}
+                  >
+                    <AiFillDelete className="table-icon delete" />
+                  </td>
+                </tr>
+              ))}
+          </table> */
+
+
+
+           {/* <table>
+          <tr>
+            <th>Name</th>
+            <th>deploy</th>
+            <th>github</th>
+            <th>imageCover</th>
+            <th>Edit</th>
+            <th>Delete</th>
+          </tr>
+          {projects &&
+            projects.map((val) => (
+              <tr key={val._id}>
+                <td>{val.title}</td>
+                <td>{val.deployUrl}</td>
+                <td>{val.githubUrl}</td>
+                <td>
+                  <img src={val.imageCover} alt="" className="table-image" />
+                </td>
+
+                <td style={{ cursor: "pointer" }}>
+                  <FiEdit className="table-icon edit" />
+                </td>
+                <td style={{ cursor: "pointer" }}>
+                  <AiFillDelete className="table-icon delete" />
+                </td>
+              </tr>
+            ))}
+        </table> */}

@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import "./HomeHero.css";
 import { useDispatch, useSelector } from "react-redux";
 import { getAllAbout } from "../../Redux/About/aboutAction";
-import { Cursor } from "react-simple-typewriter";
 import { Typewriter } from "react-simple-typewriter";
 const HomeHero = () => {
   const dispatch = useDispatch();
