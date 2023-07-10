@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./Skill.css";
 import axios from "axios";
+import { toast } from "react-toastify";
 const Skill = () => {
   const [data, setData] = useState();
   useEffect(() => {
@@ -9,7 +10,7 @@ const Skill = () => {
         const { data } = await axios.get("/api/v1/skill");
         setData(data.data);
       } catch (error) {
-        console.log(error);
+        toast.success(error);
       }
     };
     getSkill();

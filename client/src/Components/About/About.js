@@ -8,7 +8,6 @@ const About = () => {
   useEffect(() => {
     dispatch(getAllAbout());
   }, [dispatch]);
-  console.log(about[0]?.photo);
   return (
     <div className="about">
       <h2 className="heading--primary">About me</h2>
