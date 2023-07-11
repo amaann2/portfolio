@@ -7,7 +7,8 @@ export const getAllProject = () => async (dispatch) => {
       type: projectActionType.ALL_PROJECT_REQUEST,
     });
     const { data } = await axios.get(
-      "https://amaan.onrender.com/api/v1/project"
+      "https://amaan.onrender.com/api/v1/project",
+      { withCredentials: true }
     );
     dispatch({
       type: projectActionType.ALL_PROJECT_SUCCESS,

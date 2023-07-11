@@ -22,7 +22,7 @@ app.use(
     credentials: true,
   })
 );
-app.use("*", cors());
+// app.use("*", cors());
 app.use(express.json());
 
 if (process.env.NODE_ENV === "development") {
