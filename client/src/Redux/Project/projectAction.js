@@ -6,7 +6,9 @@ export const getAllProject = () => async (dispatch) => {
     dispatch({
       type: projectActionType.ALL_PROJECT_REQUEST,
     });
-    const { data } = await axios.get("/api/v1/project");
+    const { data } = await axios.get(
+      "https://amaan.onrender.com/api/v1/project"
+    );
     dispatch({
       type: projectActionType.ALL_PROJECT_SUCCESS,
       payload: data.data,
