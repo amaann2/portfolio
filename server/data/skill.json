@@ -1,50 +1,50 @@
 [
     {
-        "_id": "64aa3ea816e221ba266bd971",
-        "name": "React",
-        "image": "react.png",
-        "__v": 0
+    "_id": "64aa3ea816e221ba266bd971",
+    "name": "React",
+    "image": "https://i.ibb.co/6w3ScWZ/react.png",
+    "__v": 0
     },
     {
-        "_id": "64aa3eb916e221ba266bd974",
-        "name": "Node js",
-        "image": "nodejs.png",
-        "__v": 0
+    "_id": "64aa3ee416e221ba266bd97d",
+    "name": "javascript",
+    "image": "https://i.ibb.co/V2LWHL1/java-script.png",
+    "__v": 0
     },
     {
-        "_id": "64aa3ec516e221ba266bd977",
-        "name": "mongodb",
-        "image": "mongodb.png",
-        "__v": 0
+    "_id": "64aa3ed316e221ba266bd97a",
+    "name": "html",
+    "image": "https://i.ibb.co/D1cxDgH/html-5.png",
+    "__v": 0
     },
     {
-        "_id": "64aa3ed316e221ba266bd97a",
-        "name": "html",
-        "image": "html-5.png",
-        "__v": 0
+    "_id": "64aa3ef316e221ba266bd980",
+    "name": "express",
+    "image": "https://i.ibb.co/28Lk0kN/express.png",
+    "__v": 0
     },
     {
-        "_id": "64aa3ee416e221ba266bd97d",
-        "name": "javascript",
-        "image": "java-script.png",
-        "__v": 0
+    "_id": "64aa3f2616e221ba266bd992",
+    "name": "github",
+    "image": "https://i.ibb.co/Fm7jd49/githubwhite.png",
+    "__v": 0
     },
     {
-        "_id": "64aa3ef316e221ba266bd980",
-        "name": "express",
-        "image": "express.png",
-        "__v": 0
+    "_id": "64aa3f0516e221ba266bd983",
+    "name": "css",
+    "image": "https://i.ibb.co/qDvPTjb/css-3.png",
+    "__v": 0
     },
     {
-        "_id": "64aa3f0516e221ba266bd983",
-        "name": "css",
-        "image": "css-3.png",
-        "__v": 0
+    "_id": "64aa3ec516e221ba266bd977",
+    "name": "mongodb",
+    "image": "https://i.ibb.co/DfcH7kg/mongodb.png",
+    "__v": 0
     },
     {
-        "_id": "64aa3f2616e221ba266bd992",
-        "name": "github",
-        "image": "githubwhite.png",
-        "__v": 0
+    "_id": "64abdeb6e057dec05223091b",
+    "name": "Nodejs",
+    "image": "https://i.ibb.co/BNhGtxx/nodejs.png",
+    "__v": 0
     }
-]
+    ]

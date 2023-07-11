@@ -1,57 +1,57 @@
 [
     {
-        "_id": "64aa40e716e221ba266bd9a3",
-        "title": "Trexxplore travel app",
-        "description": "Trexxplore is a feature-rich travel exploration app built using the MERN stack. It offers user authentication, CRUD operations, admin functionality, Redux state management, Stripe integration, and more. Users can browse, book, and manage travel destinations, leave reviews, and make secure payments",
-        "imageCover": "trexxplore.png",
-        "tools": [
-            "nodejs",
-            "react",
-            "express",
-            "mongodb",
-            "html",
-            "css",
-            "stripe",
-            "jwt"
-        ],
-        "githubUrl": "https://github.com/amaann2/trexxplore",
-        "deployUrl": "https://trexbackend.onrender.com/",
-        "__v": 0
+    "_id": "64aa41b216e221ba266bd9b3",
+    "title": "Eccomerce Website",
+    "description": "One of the key features of E-commerce App is user authentication, You can create a user account and sign in , Another important feature of our E-commerce App is the shopping cart, wishlist , which is stored in Redux. You can add items to your cart and view them at any time, even if you leave the app and come back later.",
+    "imageCover": "https://i.ibb.co/55rvnXr/fashion.png",
+    "tools": [
+    "react",
+    "redux",
+    "firebase",
+    "html",
+    "css",
+    "stripe",
+    "javascript",
+    "user authentication"
+    ],
+    "githubUrl": "https://github.com/amaann2/ecomm-clothing/",
+    "deployUrl": "https://fashionmarkett.netlify.app/",
+    "__v": 0
     },
     {
-        "_id": "64aa41b216e221ba266bd9b3",
-        "title": "Eccomerce Website",
-        "description": "One of the key features of E-commerce App is user authentication, You can create a user account and sign in , Another important feature of our E-commerce App is the shopping cart, wishlist , which is stored in Redux. You can add items to your cart and view them at any time, even if you leave the app and come back later.",
-        "imageCover": "fashion.png",
-        "tools": [
-            "react",
-            "redux",
-            "firebase",
-            "html",
-            "css",
-            "stripe",
-            "javascript",
-            "user authentication"
-        ],
-        "githubUrl": "https://github.com/amaann2/ecomm-clothing/",
-        "deployUrl": "https://fashionmarkett.netlify.app/",
-        "__v": 0
+    "_id": "64aa42d716e221ba266bd9d0",
+    "title": "Weather App",
+    "description": "This weather app using React JS that provides users with real-time weather information for their location. I used the OpenWeatherAPI to fetch weather data and integrated it with my React JS code to display the information in a user-friendly way , Another feature is image is changing dyanamic according to the weather desciption .This is fully resposive website",
+    "imageCover": "https://i.ibb.co/sqyywCX/weather.png",
+    "tools": [
+    "react",
+    "context api",
+    "html",
+    "css",
+    "javascript",
+    "OpenWeatherAPI"
+    ],
+    "githubUrl": "https://github.com/amaann2/weatherapp",
+    "deployUrl": "https://weatherrrrapp.netlify.app/",
+    "__v": 0
     },
     {
-        "_id": "64aa42d716e221ba266bd9d0",
-        "title": "Weather App",
-        "description": "This weather app using React JS that provides users with real-time weather information for their location. I used the OpenWeatherAPI to fetch weather data and integrated it with my React JS code to display the information in a user-friendly way , Another feature is image is changing dyanamic according to the weather desciption .This is fully resposive website",
-        "imageCover": "weather.png",
-        "tools": [
-            "react",
-            "context api",
-            "html",
-            "css",
-            "javascript",
-            "OpenWeatherAPI"
-        ],
-        "githubUrl": "https://github.com/amaann2/weatherapp",
-        "deployUrl": "https://weatherrrrapp.netlify.app/",
-        "__v": 0
+    "_id": "64aa40e716e221ba266bd9a3",
+    "title": "Trexxplore travel app",
+    "description": "Trexxplore is a feature-rich travel exploration app built using the MERN stack. It offers user authentication, CRUD operations, admin functionality, Redux state management, Stripe integration, and more. Users can browse, book, and manage travel destinations, leave reviews, and make secure payments",
+    "imageCover": "https://i.ibb.co/QKnthZT/trexxplore.png",
+    "tools": [
+    "nodejs",
+    "react",
+    "express",
+    "mongodb",
+    "html",
+    "css",
+    "stripe",
+    "jwt"
+    ],
+    "githubUrl": "https://github.com/amaann2/trexxplore",
+    "deployUrl": "https://trexbackend.onrender.com/",
+    "__v": 0
     }
-]
+    ]

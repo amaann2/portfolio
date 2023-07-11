@@ -1,31 +1,31 @@
 [
     {
-        "_id": "64a9707c4d63a9d3c38b0efb",
-        "degree": "Bachelor of Computer Science ",
-        "from": 2021,
-        "to": 2024,
-        "percentage": 8.8,
-        "instituteName": "Sk Somaiya  College",
-        "fieldOfStudy": "Computer Science",
-        "__v": 0
+    "_id": "64a9707c4d63a9d3c38b0efb",
+    "degree": "Bachelor of Computer Science ",
+    "from": 2021,
+    "to": 2024,
+    "percentage": 8.8,
+    "instituteName": "Sk Somaiya  College",
+    "fieldOfStudy": "Computer Science",
+    "__v": 0
     },
     {
-        "_id": "64a970a24d63a9d3c38b0efe",
-        "degree": "HSC (12th)",
-        "from": 2018,
-        "to": 2020,
-        "percentage": 63,
-        "instituteName": "SM Shetty jr college",
-        "fieldOfStudy": "Science",
-        "__v": 0
+    "_id": "64a970a24d63a9d3c38b0efe",
+    "degree": "HSC (12th)",
+    "from": 2018,
+    "to": 2020,
+    "percentage": 63,
+    "instituteName": "SM Shetty jr college",
+    "fieldOfStudy": "Science",
+    "__v": 0
     },
     {
-        "_id": "64a970ea4d63a9d3c38b0f03",
-        "degree": "SSC (10th)",
-        "to": 2018,
-        "percentage": 82,
-        "instituteName": "Eden High School",
-        "fieldOfStudy": "School",
-        "__v": 0
+    "_id": "64a970ea4d63a9d3c38b0f03",
+    "degree": "SSC (10th)",
+    "to": 2018,
+    "percentage": 82,
+    "instituteName": "Eden High School",
+    "fieldOfStudy": "School",
+    "__v": 0
     }
-]
+    ]

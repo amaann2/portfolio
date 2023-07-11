@@ -28,8 +28,6 @@ if (process.env.NODE_ENV === "development") {
 }
 app.use(compression());
 
-// app.use(express.static(path.join(__dirname, "build")));
-
 app.use("/api/v1/education", educationRoute);
 app.use("/api/v1/project", projectRoute);
 app.use("/api/v1/skill", skillRoute);
@@ -38,9 +36,6 @@ app.use("/api/v1/users", userRoute);
 app.use("/api/v1/about", aboutRoute);
 app.post("/api/v1/contact", sendMail);
 
-// app.get("*", (req, res) => {
-//   res.sendFile(path.join(__dirname, "build", "index.html"));
-// });
 app.all("*", (req, res, next) => {
   next(new AppError(`can't find ${req.originalUrl} on this server`, 404));
 });
@@ -50,3 +45,9 @@ app.use(globalErrorController);
 module.exports = app;
 
 // app.use(express.static(`${__dirname}/public/img/`));
+
+// app.use(express.static(path.join(__dirname, "build")));
+
+// app.get("*", (req, res) => {
+//   res.sendFile(path.join(__dirname, "build", "index.html"));
+// });
