@@ -17,6 +17,8 @@ const cookieParser = require("cookie-parser");
 app.use(cookieParser());
 app.use(
   cors({
+    origin: "https://amaaan.netlify.app",
+    methods: ["GET", "POST", "DELETE", "PATCH", "PUT"],
     credentials: true,
   })
 );
