@@ -27,7 +27,8 @@ h3 {
 .col-2 {
     flex-basis: 50%;
     min-width: 300px;
-    gap: 10rem;
+    gap: 2rem;
+
 }
 
 .col-3 {

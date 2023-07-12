@@ -1,8 +1,7 @@
-
 .col-2 p {
     color: var(--slate);
     font-size: 1.6rem;
-    padding: 2rem  7rem;
+    padding: 2rem 7rem;
     /* letter-spacing: 2; */
     line-height: 24px;
 }
@@ -12,7 +11,7 @@
     width: 50%;
     position: relative;
     bottom: 3rem;
-    /* left: 9rem; */
+    left: 9rem;
 }
 
 .profile-img img {
@@ -24,6 +23,7 @@
 @media only screen and (max-width:800px) {
     .col-2 p {
         padding: 0;
+        padding-bottom: 2rem;
     }
 
     .profile-img {
