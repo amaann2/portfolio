@@ -71,3 +71,15 @@ a {
         padding-right: 10px;
     }
 }
+
+
+::-webkit-scrollbar {
+    height: 2px;
+    width: 8px;
+    background: var(--navy);
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 100px;
+    background: var(--slate);
+}
