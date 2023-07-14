@@ -22,15 +22,13 @@ import axios from "axios";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
 import ManageSkill from "./Manage-Skill/ManageSkill";
-import ManageBlog from "./Manage-Blog/ManageBlog";
 import ManageEducation from "./Manage-Education/ManageEducation";
 import ManageProject from "./Manage-Project/ManageProject";
 import LogoutIcon from "@mui/icons-material/Logout";
-import BookIcon from "@mui/icons-material/Book";
 import SchoolIcon from "@mui/icons-material/School";
 import AccountTreeIcon from "@mui/icons-material/AccountTree";
 import BuildCircleIcon from "@mui/icons-material/BuildCircle";
-import './SideNav.css'
+import "./SideNav.css";
 const drawerWidth = 240;
 
 const openedMixin = (theme) => ({
@@ -123,7 +121,6 @@ export default function SideNav() {
     { id: "education", label: "Education", icon: <SchoolIcon /> },
     { id: "project", label: "Project", icon: <AccountTreeIcon /> },
     { id: "skill", label: "Skill", icon: <BuildCircleIcon /> },
-    { id: "blog", label: "Blogs", icon: <BookIcon /> },
     {
       id: "logout",
       label: "Logout",
@@ -226,7 +223,6 @@ export default function SideNav() {
           {menuData === "about" && <ManageAbout />}
           {menuData === "skill" && <ManageSkill />}
           {menuData === "education" && <ManageEducation />}
-          {menuData === "blog" && <ManageBlog />}
           {menuData === "project" && <ManageProject />}
         </div>
       </Box>

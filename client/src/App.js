@@ -62,6 +62,7 @@ function App() {
           <Routes>
             <Route path="/blog" element={<Blog />} />
           </Routes>
+
           <Routes>
             <Route path="/login" element={<Login />} />
           </Routes>
@@ -71,6 +72,7 @@ function App() {
               element={isAuthentication ? <Dashboard /> : <Login />}
             />
           </Routes>
+
           {!isAuthentication ? (
             <>
               <Footer />

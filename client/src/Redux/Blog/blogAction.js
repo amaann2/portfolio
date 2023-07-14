@@ -6,10 +6,11 @@ export const getAllBlogs = () => async (dispatch) => {
     dispatch({
       type: blogActionType.ALL_BLOGS_REQUEST,
     });
-    const { data } = await axios.get("/api/v1/blogs");
+    const res = await axios.get(`/api/v1/publications`);
+
     dispatch({
       type: blogActionType.ALL_BLOGS_SUCCESS,
-      payload: data.data,
+      payload: res.data.items,
     });
   } catch (error) {
     dispatch({
