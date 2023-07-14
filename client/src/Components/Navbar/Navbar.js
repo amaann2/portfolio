@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Navbar.css";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { RxCross1 } from "react-icons/rx";
 import logo from "../../assets/logo.png";
@@ -15,6 +15,8 @@ const Navbar = ({ about, project, contact }) => {
       behavior: "smooth",
     });
   };
+  const location = useLocation();
+  const isBlogPage = location.pathname === "/blog";
   return (
     <nav className={`${navIsOpen ? "active" : ""}`}>
       <div className="logo">
@@ -31,18 +33,24 @@ const Navbar = ({ about, project, contact }) => {
         <li className="nav-link">
           <Link to="/">home</Link>
         </li>
-        <li className="nav-link" onClick={() => scrollToSection(about)}>
-          <Link to="#about">About</Link>
-        </li>
-        <li className="nav-link" onClick={() => scrollToSection(project)}>
-          <Link to="#project">Project</Link>
-        </li>
+        {isBlogPage ? null : (
+          <li className="nav-link" onClick={() => scrollToSection(about)}>
+            <Link to="#about">About</Link>
+          </li>
+        )}
+        {isBlogPage ? null : (
+          <li className="nav-link" onClick={() => scrollToSection(project)}>
+            <Link to="#project">Project</Link>
+          </li>
+        )}
         <li className="nav-link">
           <Link to="/blog">Blog</Link>
         </li>
-        <li className="nav-link" onClick={() => scrollToSection(contact)}>
-          <Link to="#contact">Contact</Link>
-        </li>
+        {isBlogPage ? null : (
+          <li className="nav-link" onClick={() => scrollToSection(contact)}>
+            <Link to="#contact">Contact</Link>
+          </li>
+        )}
       </ul>
     </nav>
   );

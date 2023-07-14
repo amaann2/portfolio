@@ -25,12 +25,12 @@
 @media only screen and (max-width:800px) {
 
     .social-icons {
-        position: absolute;
-        bottom: 20%;
-        left: 18%;
+        position: relative;
+        left: 17%;
         z-index: 120;
         display: flex;
         flex-direction: row;
+        width: 10%;
 
 
     }

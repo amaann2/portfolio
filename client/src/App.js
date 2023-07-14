@@ -45,7 +45,6 @@ function App() {
           {!isAuthentication ? (
             <>
               <Navbar about={about} project={project} contact={contact} />
-              <SocialIcons />
             </>
           ) : (
             ""
@@ -75,6 +74,7 @@ function App() {
 
           {!isAuthentication ? (
             <>
+              <SocialIcons />
               <Footer />
             </>
           ) : (
