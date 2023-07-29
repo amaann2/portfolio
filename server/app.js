@@ -23,8 +23,8 @@ app.use(
     credentials: true,
   })
 );
-// app.use("*", cors());
 app.use(express.json());
+app.use(express.static(path.join(__dirname, "build")));
 
 if (process.env.NODE_ENV === "development") {
   app.use(morgan("dev"));
@@ -38,17 +38,16 @@ app.use("/api/v1/users", userRoute);
 app.use("/api/v1/about", aboutRoute);
 app.post("/api/v1/contact", sendMail);
 app.get("/api/v1/publications", getPublication);
-app.use(express.static(path.join(__dirname, "build")));
 
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "build", "index.html"));
 });
 
-// app.all("*", (req, res, next) => {
-//   next(new AppError(`can't find ${req.originalUrl} on this server`, 404));
-// });
 
 app.use(globalErrorController);
 
 module.exports = app;
 
+// app.all("*", (req, res, next) => {
+//   next(new AppError(`can't find ${req.originalUrl} on this server`, 404));
+// });
