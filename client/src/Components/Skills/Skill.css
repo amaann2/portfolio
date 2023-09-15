@@ -1,5 +1,9 @@
 .skill {
     margin: 4rem 0;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .skills_skill {
