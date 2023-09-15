@@ -12,13 +12,11 @@ const { sendMail } = require("./Controller/emailController");
 const path = require("path");
 const compression = require("compression");
 const cookieParser = require("cookie-parser");
-const {
-  getPublication,
-} = require("./Controller/publicationController");
+const { getPublication } = require("./Controller/publicationController");
 app.use(cookieParser());
 app.use(
   cors({
-    origin: "https://amaaan.netlify.app",
+    origin: "https://amaan-tc7y.onrender.com/",
     methods: ["GET", "POST", "DELETE", "PATCH", "PUT"],
     credentials: true,
   })
@@ -42,7 +40,6 @@ app.get("/api/v1/publications", getPublication);
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "build", "index.html"));
 });
-
 
 app.use(globalErrorController);
 
