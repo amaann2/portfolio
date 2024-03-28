@@ -19,6 +19,10 @@ const projectSchema = mongoose.Schema({
   deployUrl: {
     type: String,
   },
+  createdAt: {
+    type: Date,
+    default: new Date(),
+  },
 });
 
 const Project = mongoose.model("Project", projectSchema);

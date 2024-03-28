@@ -10,6 +10,7 @@ const Project = () => {
   useEffect(() => {
     dispatch(getAllProject());
   }, [dispatch]);
+
   return (
     <>
       <h2 className="heading--primary">My Project</h2>
