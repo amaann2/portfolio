@@ -59,11 +59,12 @@ a {
 .heading--primary {
     color: var(--lightest-slate);
     text-align: center;
-    margin-top: 4rem;
-    margin-bottom: 2rem;
     font-size: 3.5rem;
 }
 
+.layout {
+    margin: 10rem 0;
+}
 
 @media screen and (max-width:800px) {
     .container {

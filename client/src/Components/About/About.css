@@ -1,24 +1,38 @@
 .col-2 p {
     color: var(--slate);
     font-size: 1.6rem;
-    padding: 2rem 7rem;
+    padding: 1rem 0rem;
+    padding-right: 7rem;
     /* letter-spacing: 2; */
     line-height: 24px;
+}
+
+.heading--about {
+    color: var(--lightest-slate);
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+    font-size: 3.5rem;
 }
 
 .profile-img {
     min-width: 200px;
     width: 50%;
     position: relative;
-    bottom: 3rem;
-    left: 9rem;
+    top: 3rem;
+    left: 20rem;
+    border: 10px solid var(--green);
+    border-radius: 10px;
 }
 
 .profile-img img {
     width: 100%;
+    border-radius: 2%;
+    position: relative;
+    bottom: 20px;
+    right: 20px;
 
-    border-radius: 5%;
 }
+
 
 @media only screen and (max-width:800px) {
     .col-2 p {

@@ -17,9 +17,9 @@ const Skill = () => {
   }, []);
 
   return (
-    <>
-      <h2 className="heading--primary">My Skill</h2>
-      <div className="row skill">
+    <main className="layout">
+      <h2 className="heading--primary">SKILLS</h2>
+      <div className=" skill">
         {data &&
           data.map((skill) => (
             <div className="skills_skill" data-aos="fade-up" key={skill._id}>
@@ -28,7 +28,7 @@ const Skill = () => {
             </div>
           ))}
       </div>
-    </>
+    </main>
   );
 };
 

@@ -10,8 +10,8 @@ const Education = () => {
   }, [dispatch]);
 
   return (
-    <main>
-      <h3 className="heading--primary">Education</h3>
+    <main className="layout">
+      <h3 className="heading--primary">EDUCATION</h3>
       <div className="timeline">
         {educations &&
           educations.map((education) => (

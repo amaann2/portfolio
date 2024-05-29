@@ -16,6 +16,7 @@ import Dashboard from "./Admin/Pages/Dashboard/Dashboard";
 import store from "./Redux/store";
 import { loadUser } from "./Redux/User/userAction";
 import { useSelector } from "react-redux";
+import BackgroundEffect from "./Components/BackgroundEffect";
 function App() {
   useEffect(() => {
     store.dispatch(loadUser());
@@ -36,6 +37,7 @@ function App() {
   }, []);
   return (
     <>
+      <BackgroundEffect />
       {showSplash ? (
         <>
           <SplashScreen />

@@ -39,8 +39,8 @@ const Contact = () => {
     }
   };
   return (
-    <main>
-      <h3 className="heading--primary">Contact me</h3>
+    <main className="layout">
+      <h3 className="heading--primary">CONTACT ME</h3>
       <form onSubmit={handleSubmit}>
         <ul>
           <li>
@@ -55,6 +55,7 @@ const Contact = () => {
               name="name"
               value={inputData.name}
               onChange={handleChange}
+              required
             />
           </li>
           <li>
@@ -70,6 +71,7 @@ const Contact = () => {
               name="email"
               value={inputData.email}
               onChange={handleChange}
+              required
             />
           </li>
           <li>

@@ -8,6 +8,7 @@ const educationRoute = require("./Routes/educationRoute");
 const skillRoute = require("./Routes/skillRoute");
 const userRoute = require("./Routes/userRoute");
 const aboutRoute = require("./Routes/aboutRoute");
+const experienceRoute = require("./Routes/experienceRoute");
 const { sendMail } = require("./Controller/emailController");
 const path = require("path");
 const compression = require("compression");
@@ -35,6 +36,7 @@ app.use("/api/v1/project", projectRoute);
 app.use("/api/v1/skill", skillRoute);
 app.use("/api/v1/users", userRoute);
 app.use("/api/v1/about", aboutRoute);
+app.use("/api/v1/experience", experienceRoute);
 app.post("/api/v1/contact", sendMail);
 app.get("/api/v1/publications", getPublication);
 
